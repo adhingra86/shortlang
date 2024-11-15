@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+
 import localFont from "next/font/local";
 import "./globals.css";
-import Link from "next/link";
 import { GridIcon } from "./components/icons/grid";
 import { HomeIcon } from "./components/icons/home";
 import { SettingsIcon } from "./components/icons/settings";
 import { UserIcon } from "./components/icons/user";
+import Logo from "@/assets/logo.png";
+import Image from "next/image";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -47,6 +50,9 @@ export default function RootLayout({
             <SettingsIcon width="22px" height="22px" />
           </Link>
         </nav>
+        <header className="fixed flex top-0 left-0 ml-[54px] p-2">
+          <Image width={200} src={Logo} alt="Shortlang logo" />
+        </header>
         {children}
       </body>
     </html>
