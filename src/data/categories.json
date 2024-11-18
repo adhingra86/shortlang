@@ -1,0 +1,86 @@
+{
+  "nl": [
+    {
+      "id": "1",
+      "name": "Greetings",
+      "language": "nl",
+      "description": "Basic phrases for saying hello and goodbye."
+    },
+    {
+      "id": "2",
+      "name": "Travel",
+      "language": "nl",
+      "description": "Common phrases for traveling in Dutch-speaking areas"
+    }
+  ],
+  "en": [
+    {
+      "id": "1",
+      "name": "Greetings",
+      "language": "en",
+      "description": "Basic phrases for saying hello and goodbye."
+    },
+    {
+      "id": "2",
+      "name": "Travel",
+      "language": "en",
+      "description": "Travel related phrases."
+    }
+  ],
+  "fr": [
+    {
+      "id": "1",
+      "name": "Greetings",
+      "language": "fr",
+      "description": "Basic phrases for saying hello and goodbye."
+    },
+    {
+      "id": "2",
+      "name": "Travel",
+      "language": "fr",
+      "description": "Travel related phrases."
+    }
+  ],
+  "de": [
+    {
+      "id": "1",
+      "name": "Greetings",
+      "language": "de",
+      "description": "Basic phrases for saying hello and goodbye."
+    },
+    {
+      "id": "2",
+      "name": "Travel",
+      "language": "de",
+      "description": "Travel related phrases."
+    }
+  ],
+  "it": [
+    {
+      "id": "1",
+      "name": "Greetings",
+      "language": "it",
+      "description": "Basic phrases for saying hello and goodbye."
+    },
+    {
+      "id": "2",
+      "name": "Travel",
+      "language": "it",
+      "description": "Travel related phrases."
+    }
+  ],
+  "es": [
+    {
+      "id": "1",
+      "name": "Greetings",
+      "language": "es",
+      "description": "Basic phrases for saying hello and goodbye."
+    },
+    {
+      "id": "2",
+      "name": "Travel",
+      "language": "es",
+      "description": "Travel related phrases."
+    }
+  ]
+}

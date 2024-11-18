@@ -1,0 +1,72 @@
+[
+  {
+    "id": "101",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Hallo",
+    "translation": "Hello"
+  },
+  {
+    "id": "102",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Tot ziens",
+    "translation": "Goodbye"
+  },
+  {
+    "id": "201",
+    "categoryId": "1",
+    "language": "es",
+    "phrase": "Hola",
+    "translation": "Hello"
+  },
+  {
+    "id": "202",
+    "categoryId": "1",
+    "language": "es",
+    "phrase": "Adiós",
+    "translation": "Goodbye"
+  },
+  {
+    "id": "301",
+    "categoryId": "1",
+    "language": "de",
+    "phrase": "Hallo",
+    "translation": "Hello"
+  },
+  {
+    "id": "302",
+    "categoryId": "1",
+    "language": "de",
+    "phrase": "auf Wiedersehen",
+    "translation": "Goodbye"
+  },
+  {
+    "id": "301",
+    "categoryId": "1",
+    "language": "fr",
+    "phrase": "Bonjour",
+    "translation": "Hello"
+  },
+  {
+    "id": "302",
+    "categoryId": "1",
+    "language": "fr",
+    "phrase": "Au revoir",
+    "translation": "Goodbye"
+  },
+  {
+    "id": "301",
+    "categoryId": "1",
+    "language": "it",
+    "phrase": "Ciao",
+    "translation": "Hello"
+  },
+  {
+    "id": "302",
+    "categoryId": "1",
+    "language": "it",
+    "phrase": "Arrivederci",
+    "translation": "Goodbye"
+  }
+]

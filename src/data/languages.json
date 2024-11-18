@@ -1,0 +1,38 @@
+[
+  {
+    "id": "nl",
+    "name": "Dutch",
+    "code": "nl",
+    "nativeName": "Nederlands"
+  },
+  {
+    "id": "en",
+    "name": "English",
+    "code": "en",
+    "nativeName": "English"
+  },
+  {
+    "id": "fr",
+    "name": "French",
+    "code": "fr",
+    "nativeName": "Français"
+  },
+  {
+    "id": "de",
+    "name": "German",
+    "code": "de",
+    "nativeName": "Deutsch"
+  },
+  {
+    "id": "it",
+    "name": "Italian",
+    "code": "it",
+    "nativeName": "Italiano"
+  },
+  {
+    "id": "es",
+    "name": "Spanish",
+    "code": "es",
+    "nativeName": "Español"
+  }
+]
