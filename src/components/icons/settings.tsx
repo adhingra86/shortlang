@@ -1,4 +1,4 @@
-import { IconProps } from "@/app/types";
+import { IconProps } from "@/types";
 
 export const SettingsIcon = ({
   width,
