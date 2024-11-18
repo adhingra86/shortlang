@@ -3,10 +3,10 @@ import Link from "next/link";
 
 import localFont from "next/font/local";
 import "./globals.css";
-import { GridIcon } from "./components/icons/grid";
-import { HomeIcon } from "./components/icons/home";
-import { SettingsIcon } from "./components/icons/settings";
-import { UserIcon } from "./components/icons/user";
+import { GridIcon } from "../components/icons/grid";
+import { HomeIcon } from "../components/icons/home";
+import { SettingsIcon } from "../components/icons/settings";
+import { UserIcon } from "../components/icons/user";
 import Logo from "@/assets/logo.png";
 import Image from "next/image";
 
