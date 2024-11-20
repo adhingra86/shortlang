@@ -9,14 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.46.1",
-    "express": "^4.21.1",
     "next": "14.2.17",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
