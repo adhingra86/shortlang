@@ -1,5 +1,3 @@
-import React from "react";
-
-export const Languages = () => {
+export default function Languages() {
   return <div>Languages</div>;
-};
+}
