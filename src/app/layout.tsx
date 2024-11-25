@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import localFont from "next/font/local";
 import "./globals.css";
+import "@mantine/core/styles.css";
 import { GridIcon } from "../components/icons/grid";
 import { HomeIcon } from "../components/icons/home";
 import { SettingsIcon } from "../components/icons/settings";
