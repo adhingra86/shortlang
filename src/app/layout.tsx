@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { createTheme, MantineProvider } from "@mantine/core";
+import { ModalsProvider } from "@mantine/modals";
 
 import localFont from "next/font/local";
 import "./globals.css";
 import "@mantine/core/styles.css";
-import { GridIcon } from "../components/icons/grid";
-import { HomeIcon } from "../components/icons/home";
-import { SettingsIcon } from "../components/icons/settings";
-import { UserIcon } from "../components/icons/user";
-import Logo from "@/assets/logo.png";
-import Image from "next/image";
+
 import ReactQueryProvider from "@/utils/providers/reactQueryProvider";
 
 const geistSans = localFont({
@@ -39,24 +35,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ReactQueryProvider>
-          <nav className="fixed flex flex-col gap-6 top-0 left-0 p-4 h-full bg-slate-100">
-            <Link href={"/"}>
-              <HomeIcon width="22px" height="22px" />
-            </Link>
-            <Link href={"/"}>
-              <GridIcon width="22px" height="22px" />
-            </Link>
-            <Link href={"/"}>
-              <UserIcon width="22px" height="22px" />
-            </Link>
-            <Link href={"/"}>
-              <SettingsIcon width="22px" height="22px" />
-            </Link>
-          </nav>
-          <header className="fixed flex top-0 left-0 ml-[54px] p-2">
-            <Image width={200} src={Logo} alt="Shortlang logo" />
-          </header>
-          {children}
+          <MantineProvider defaultColorScheme="light">
+            <ModalsProvider>{children}</ModalsProvider>
+          </MantineProvider>
         </ReactQueryProvider>
       </body>
     </html>
