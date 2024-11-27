@@ -2,9 +2,11 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { Card, Flex, Text, Title } from "@mantine/core";
+import Image from "next/image";
 
 import { Language } from "@/types";
 import { LanguageIcon } from "@/components/languageIcon";
+import Logo from "@/assets/logo.png";
 
 async function fetchLanguages() {
   const response = await fetch("/api/languages");
@@ -23,7 +25,8 @@ export default function Home() {
   });
 
   return (
-    <div className="flex mt-10 mx-20 align-middle flex-col">
+    <div className="flex mt-10 mx-20 items-center flex-col ">
+      <Image width={300} src={Logo} alt="Shortlang logo" className="mb-10" />
       <Title size="30px" className="mb-10 text-center">
         Choose a language
       </Title>
