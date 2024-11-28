@@ -1,10 +1,13 @@
 "use client";
 
+import { useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { Card, Flex, Text, Title } from "@mantine/core";
-import Image from "next/image";
 
-import { Language } from "@/types";
+import { Language, LanguageCode } from "@/types";
 import { LanguageIcon } from "@/components/languageIcon";
 import Logo from "@/assets/logo.png";
 
@@ -15,6 +18,16 @@ async function fetchLanguages() {
 }
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language");
+
+    if (storedLanguage) {
+      router.push("/dashboard");
+    }
+  }, []);
+
   const {
     data: languages,
     error,
@@ -24,23 +37,33 @@ export default function Home() {
     queryFn: fetchLanguages, // Function to fetch data
   });
 
+  const setLanguage = (languageCode: LanguageCode): void => {
+    localStorage.setItem("language", JSON.stringify(languageCode));
+    router.push("/dashboard");
+  };
+
   return (
     <div className="flex mt-10 mx-20 items-center flex-col ">
       <Image width={300} src={Logo} alt="Shortlang logo" className="mb-10" />
       <Title size="30px" className="mb-10 text-center">
-        Choose a language
+        Choose a language to start learning
       </Title>
 
       <Flex gap={20} align={"center"} wrap={"wrap"} justify={"center"}>
         {languages?.map((language) => (
-          <Card
-            withBorder={true}
+          <Link
+            href=""
+            onClick={() => setLanguage(language.code)}
             key={language.id}
-            className="min-w-[300px] min-h-[200px] items-center justify-center hover:bg-slate-100"
           >
-            <Text size="xl">{language.name}</Text>
-            <LanguageIcon language={language} />
-          </Card>
+            <Card
+              withBorder={true}
+              className="min-w-[300px] min-h-[200px] items-center justify-center hover:bg-slate-100 rounded-2xl"
+            >
+              <Text size="xl">{language.nativeName}</Text>
+              <LanguageIcon language={language} />
+            </Card>
+          </Link>
         ))}
       </Flex>
     </div>

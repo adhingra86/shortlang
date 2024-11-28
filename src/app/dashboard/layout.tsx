@@ -15,16 +15,16 @@ export default function DashboardLayout({
   return (
     <section>
       <nav className="fixed flex flex-col gap-6 top-0 left-0 p-4 h-full bg-slate-100">
-        <Link href={"/"}>
+        <Link href={"/dashboard"}>
           <HomeIcon width="22px" height="22px" />
         </Link>
-        <Link href={"/"}>
+        <Link href={"/categories"}>
           <GridIcon width="22px" height="22px" />
         </Link>
-        <Link href={"/"}>
+        <Link href={""}>
           <UserIcon width="22px" height="22px" />
         </Link>
-        <Link href={"/"}>
+        <Link href={""}>
           <SettingsIcon width="22px" height="22px" />
         </Link>
       </nav>

@@ -25,8 +25,6 @@ export const LanguageIcon = ({ language }: { language: Language }) => {
     }
   };
 
-  console.log(getLanguageIconSource(language.code).src);
-
   return (
     <Image
       src={getLanguageIconSource(language.code).src}
