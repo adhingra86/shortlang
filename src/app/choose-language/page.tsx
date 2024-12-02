@@ -10,6 +10,7 @@ import { Card, Flex, Text, Title } from "@mantine/core";
 import { Language, LanguageCode } from "@/types";
 import { LanguageIcon } from "@/components/languageIcon";
 import Logo from "@/assets/logo.png";
+import CardComponent from "@/components/card";
 
 async function fetchLanguages() {
   const response = await fetch("/api/languages");
@@ -56,13 +57,10 @@ export default function Home() {
             onClick={() => setLanguage(language.code)}
             key={language.id}
           >
-            <Card
-              withBorder={true}
-              className="min-w-[300px] min-h-[200px] items-center justify-center hover:bg-slate-100 rounded-2xl"
-            >
-              <Text size="xl">{language.nativeName}</Text>
+            <CardComponent>
               <LanguageIcon language={language} />
-            </Card>
+              <Text size="xl">{language.nativeName}</Text>
+            </CardComponent>
           </Link>
         ))}
       </Flex>
