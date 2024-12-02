@@ -15,3 +15,11 @@ export type Language = {
   code: LanguageCode;
   nativeName: string;
 };
+
+export type Phrase = {
+  id: number;
+  categoryId: number[];
+  language: LanguageCode;
+  phrase: string;
+  translation: string;
+};

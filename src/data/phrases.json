@@ -14,6 +14,237 @@
     "translation": "Goodbye"
   },
   {
+    "id": "103",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Goedemorgen",
+    "translation": "Good morning"
+  },
+  {
+    "id": "104",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Goedenavond",
+    "translation": "Good evening"
+  },
+  {
+    "id": "105",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Dank je wel",
+    "translation": "Thank you"
+  },
+  {
+    "id": "106",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Alsjeblieft",
+    "translation": "Please"
+  },
+  {
+    "id": "107",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Hoe gaat het?",
+    "translation": "How are you?"
+  },
+  {
+    "id": "108",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Het gaat goed",
+    "translation": "I’m doing well"
+  },
+  {
+    "id": "109",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Wat is je naam?",
+    "translation": "What is your name?"
+  },
+  {
+    "id": "110",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Mijn naam is...",
+    "translation": "My name is..."
+  },
+  {
+    "id": "111",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Hoe oud ben je?",
+    "translation": "How old are you?"
+  },
+  {
+    "id": "112",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik ben dertig jaar oud",
+    "translation": "I am thirty years old"
+  },
+  {
+    "id": "113",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Waar kom je vandaan?",
+    "translation": "Where are you from?"
+  },
+  {
+    "id": "114",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik kom uit Nederland",
+    "translation": "I am from the Netherlands"
+  },
+  {
+    "id": "115",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Kun je mij helpen?",
+    "translation": "Can you help me?"
+  },
+  {
+    "id": "116",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Waar is het toilet?",
+    "translation": "Where is the bathroom?"
+  },
+  {
+    "id": "117",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Hoe laat is het?",
+    "translation": "What time is it?"
+  },
+  {
+    "id": "118",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik begrijp het niet",
+    "translation": "I don’t understand"
+  },
+  {
+    "id": "119",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Kun je dat herhalen?",
+    "translation": "Can you repeat that?"
+  },
+  {
+    "id": "120",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Wat kost het?",
+    "translation": "How much does it cost?"
+  },
+  {
+    "id": "121",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik heb honger",
+    "translation": "I’m hungry"
+  },
+  {
+    "id": "122",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik heb dorst",
+    "translation": "I’m thirsty"
+  },
+  {
+    "id": "123",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik ben moe",
+    "translation": "I’m tired"
+  },
+  {
+    "id": "124",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik hou van jou",
+    "translation": "I love you"
+  },
+  {
+    "id": "125",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Het spijt me",
+    "translation": "I’m sorry"
+  },
+  {
+    "id": "126",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Geen probleem",
+    "translation": "No problem"
+  },
+  {
+    "id": "127",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Tot straks",
+    "translation": "See you later"
+  },
+  {
+    "id": "128",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Waar is het treinstation?",
+    "translation": "Where is the train station?"
+  },
+  {
+    "id": "129",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Hoe laat vertrekt de trein?",
+    "translation": "What time does the train leave?"
+  },
+  {
+    "id": "130",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik wil een tafel reserveren",
+    "translation": "I want to book a table"
+  },
+  {
+    "id": "131",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Wat wil je drinken?",
+    "translation": "What would you like to drink?"
+  },
+  {
+    "id": "132",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik wil graag koffie",
+    "translation": "I’d like coffee"
+  },
+  {
+    "id": "133",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Hoeveel kost een broodje?",
+    "translation": "How much is a sandwich?"
+  },
+  {
+    "id": "134",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Kan ik betalen met een creditcard?",
+    "translation": "Can I pay with a credit card?"
+  },
+  {
+    "id": "135",
+    "categoryId": "1",
+    "language": "nl",
+    "phrase": "Ik heb een reservering",
+    "translation": "I have a reservation"
+  },
+  {
     "id": "201",
     "categoryId": "1",
     "language": "es",
