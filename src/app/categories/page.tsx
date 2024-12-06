@@ -2,28 +2,21 @@
 
 import CardComponent from "@/components/card";
 import { CategoriesIcon } from "@/components/categoriesIcon";
-import { LanguageCode } from "@/types";
 import { Flex, Text, Title } from "@mantine/core";
 import { useQuery } from "@tanstack/react-query";
-
-async function fetchCategories(languageCode: LanguageCode) {
-  const sanitizedCode = languageCode.replace(/['"]+/g, "");
-
-  const response = await fetch(`/api/categories?languageCode=${sanitizedCode}`);
-  if (!response.ok) throw new Error("Network response was not ok");
-  return response.json();
-}
+import { fetchCategories } from "../api/categories/route";
+import { Category } from "@/types";
 
 export default function Categories() {
   const selectedLanguageCode = window.localStorage.getItem("language");
 
   const {
     data: categories,
-    error,
     isLoading,
-  } = useQuery({
-    queryKey: ["categories"],
-    queryFn: () => fetchCategories(selectedLanguageCode as LanguageCode),
+    isError,
+  } = useQuery<Category[]>({
+    queryKey: ["greetings"],
+    queryFn: () => fetchCategories(),
   });
 
   console.log("categories", categories);
@@ -34,11 +27,11 @@ export default function Categories() {
         Categories
       </Title>
       <Flex gap="md">
-        {categories?.map((category: any) => (
+        {categories?.map((category) => (
           <CardComponent key={category.id}>
-            <CategoriesIcon category={category.name} width={32} height={32} />
+            <CategoriesIcon category={category.title} width={32} height={32} />
             <Text className="mt-2" size="lg">
-              {category.name}
+              {category.title}
             </Text>
           </CardComponent>
         ))}

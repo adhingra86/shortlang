@@ -1,13 +1,12 @@
-import { getCategories } from "@/lib/categoryService";
-import { LanguageCode } from "@/types";
+import { supabase } from "@/lib/supabase/supabase";
+import { Category } from "@/types";
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const languageCode = searchParams.get("languageCode") as LanguageCode;
+export async function fetchCategories(): Promise<Category[]> {
+  const { data, error } = await supabase.from("categories").select("*");
 
-  const categories: Promise<any> = await getCategories(languageCode);
+  if (error) {
+    throw new Error(error.message);
+  }
 
-  return new Response(JSON.stringify(categories), {
-    headers: { "Content-Type": "application/json" },
-  });
+  return data;
 }

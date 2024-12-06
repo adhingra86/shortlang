@@ -16,6 +16,14 @@ export type Language = {
   nativeName: string;
 };
 
+export type Category = {
+  id: number;
+  name: string;
+  title: string;
+  language: LanguageCode;
+  created_at: string;
+};
+
 export type Phrase = {
   id: number;
   categoryId: number[];
