@@ -7,6 +7,7 @@ import "./globals.css";
 import "@mantine/core/styles.css";
 
 import ReactQueryProvider from "@/utils/providers/reactQueryProvider";
+import SessionWrapper from "@/components/SessionWrapper";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -34,11 +35,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ReactQueryProvider>
-          <MantineProvider defaultColorScheme="light">
-            <ModalsProvider>{children}</ModalsProvider>
-          </MantineProvider>
-        </ReactQueryProvider>
+        <SessionWrapper>
+          <ReactQueryProvider>
+            <MantineProvider defaultColorScheme="light">
+              <ModalsProvider>{children}</ModalsProvider>
+            </MantineProvider>
+          </ReactQueryProvider>
+        </SessionWrapper>
       </body>
     </html>
   );

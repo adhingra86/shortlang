@@ -1,20 +1,23 @@
 "use client";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { signIn, useSession } from "next-auth/react";
+import { Button } from "@mantine/core";
 
 export default function Home() {
-  const router = useRouter();
+  const { data: session } = useSession();
 
-  useEffect(() => {
-    const storedLanguage = localStorage.getItem("language");
+  console.log(session);
 
-    if (storedLanguage) {
-      router.push("/dashboard");
-    } else {
-      router.push("/choose-language");
-    }
-  }, []);
-
-  return <></>;
+  return (
+    <>
+      {session ? (
+        <>Test</>
+      ) : (
+        <div className="flex gap-4">
+          <Button onClick={() => signIn("github")}>Sign in with GitHub</Button>
+          <Button onClick={() => signIn("google")}>Sign in with Google</Button>
+        </div>
+      )}
+    </>
+  );
 }
