@@ -33,7 +33,7 @@ export default function DashboardLayout({
         <Image width={200} src={Logo} alt="Shortlang logo" />
       </header>
 
-      <Container p={"md"} mt="4.5rem" ml="54px">
+      <Container p={"md"} pt="5rem" ml="54px">
         {children}
       </Container>
     </section>

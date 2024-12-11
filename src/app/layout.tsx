@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createTheme, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 
 import localFont from "next/font/local";
@@ -37,7 +37,7 @@ export default function RootLayout({
       >
         <SessionWrapper>
           <ReactQueryProvider>
-            <MantineProvider defaultColorScheme="light">
+            <MantineProvider>
               <ModalsProvider>{children}</ModalsProvider>
             </MantineProvider>
           </ReactQueryProvider>
