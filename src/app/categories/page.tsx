@@ -1,15 +1,14 @@
 "use client";
 
+import { useQuery } from "@tanstack/react-query";
+import { Flex, Text, Title } from "@mantine/core";
+
 import CardComponent from "@/components/card";
 import { CategoriesIcon } from "@/components/categoriesIcon";
-import { Flex, Text, Title } from "@mantine/core";
-import { useQuery } from "@tanstack/react-query";
 import { fetchCategories } from "../api/categories/route";
 import { Category } from "@/types";
 
 export default function Categories() {
-  const selectedLanguageCode = window.localStorage.getItem("language");
-
   const {
     data: categories,
     isLoading,
@@ -18,8 +17,6 @@ export default function Categories() {
     queryKey: ["greetings"],
     queryFn: () => fetchCategories(),
   });
-
-  console.log("categories", categories);
 
   return (
     <section>

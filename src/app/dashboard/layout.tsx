@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
 import { GridIcon } from "@/components/icons/grid";
 import { HomeIcon } from "@/components/icons/home";
@@ -29,8 +32,11 @@ export default function DashboardLayout({
           <SettingsIcon width="22px" height="22px" />
         </Link>
       </nav>
-      <header className="fixed flex top-0 left-0 ml-[54px] p-2">
+      <header className="fixed flex items-center top-0 left-0 ml-[54px] p-2 justify-between w-[calc(100%-64px)]">
         <Image width={200} src={Logo} alt="Shortlang logo" />
+        <a className="cursor-pointer " onClick={() => signOut()}>
+          Logout
+        </a>
       </header>
 
       <Container p={"md"} pt="5rem" ml="54px">
