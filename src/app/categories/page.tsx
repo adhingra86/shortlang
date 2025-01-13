@@ -25,7 +25,7 @@ export default function Categories() {
       </Title>
       <Flex gap="md">
         {categories?.map((category) => (
-          <CardComponent key={category.id}>
+          <CardComponent key={category.category_id}>
             <CategoriesIcon category={category.title} width={32} height={32} />
             <Text className="mt-2" size="lg">
               {category.title}

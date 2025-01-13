@@ -17,7 +17,7 @@ export type Language = {
 };
 
 export type Category = {
-  id: number;
+  category_id: number;
   name: string;
   title: string;
   language: LanguageCode;
