@@ -25,9 +25,10 @@ export type Category = {
 };
 
 export type Phrase = {
-  id: number;
-  categoryId: number[];
-  language: LanguageCode;
+  phrase_id: number;
+  category_id: number;
+  language_code: LanguageCode;
   phrase: string;
   translation: string;
+  level_code: number;
 };

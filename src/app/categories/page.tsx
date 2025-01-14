@@ -6,7 +6,8 @@ import { Flex, Text, Title } from "@mantine/core";
 import CardComponent from "@/components/card";
 import { CategoriesIcon } from "@/components/categoriesIcon";
 import { fetchCategories } from "../api/categories/route";
-import { Category } from "@/types";
+import { Category, Phrase } from "@/types";
+import { fetchPhrases } from "../api/phrases/route";
 
 export default function Categories() {
   const {
@@ -25,12 +26,21 @@ export default function Categories() {
       </Title>
       <Flex gap="md">
         {categories?.map((category) => (
-          <CardComponent key={category.category_id}>
-            <CategoriesIcon category={category.title} width={32} height={32} />
-            <Text className="mt-2" size="lg">
-              {category.title}
-            </Text>
-          </CardComponent>
+          <a
+            key={category.category_id}
+            onClick={() => fetchPhrases(category.category_id)}
+          >
+            <CardComponent>
+              <CategoriesIcon
+                category={category.title}
+                width={32}
+                height={32}
+              />
+              <Text className="mt-2" size="lg">
+                {category.title}
+              </Text>
+            </CardComponent>
+          </a>
         ))}
       </Flex>
     </section>
