@@ -1,12 +1,9 @@
-import { supabase } from "@/lib/supabase/supabase";
-import { Category } from "@/types";
+import { getCategories } from "@/lib/categoryService";
 
-export async function fetchCategories(): Promise<Category[]> {
-  const { data, error } = await supabase.from("categories").select("*");
+export async function GET() {
+  const categories = await getCategories();
 
-  if (error) {
-    throw new Error(error.message);
-  }
-
-  return data;
+  return new Response(JSON.stringify(categories), {
+    headers: { "Content-Type": "application/json" },
+  });
 }

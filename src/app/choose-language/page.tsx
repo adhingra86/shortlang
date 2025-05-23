@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
-import { Card, Flex, Text, Title } from "@mantine/core";
+import { Flex, Text, Title } from "@mantine/core";
 
 import { Language, LanguageCode } from "@/types";
 import { LanguageIcon } from "@/components/languageIcon";
@@ -34,13 +34,15 @@ export default function Home() {
     error,
     isLoading,
   } = useQuery<Language[]>({
-    queryKey: ["languages"], // Unique key for caching
-    queryFn: fetchLanguages, // Function to fetch data
+    queryKey: ["languages"],
+    queryFn: fetchLanguages,
   });
 
   const setLanguage = (languageCode: LanguageCode): void => {
+    console.log("languageCode", languageCode);
     localStorage.setItem("language", JSON.stringify(languageCode));
     router.push("/dashboard");
+    console.log("language set complete");
   };
 
   return (
@@ -54,7 +56,10 @@ export default function Home() {
         {languages?.map((language) => (
           <Link
             href=""
-            onClick={() => setLanguage(language.code)}
+            onClick={(e) => {
+              e.preventDefault();
+              setLanguage(language.code)
+            }}
             key={language.id}
           >
             <CardComponent>
